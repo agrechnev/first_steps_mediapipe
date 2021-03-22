@@ -1,0 +1,20 @@
+# Here we define graph in a separate file
+# You can put comments in protobuf text files
+
+input_stream: "in"
+output_stream: "out"
+
+# This is the source node that generates the stream gen
+node {
+    calculator: "StringSourceCalculator"
+    output_stream: "STR:gen"
+}
+
+# This node joins streams in and gen
+# What happens if you swap the indices 0 and 1 ?
+node {
+    calculator: "StringJoinCalculator"
+    input_stream: "STR:0:in"
+    input_stream: "STR:1:gen"
+    output_stream: "STR:out"
+}

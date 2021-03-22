@@ -1,0 +1,21 @@
+syntax = "proto2";
+// This is the standard syntax for calculator options protobuf type
+
+// Put GoblinCalculator14Options into C++ namespace mediapipe
+package mediapipe;
+
+// Import proto file that defines CalculatorOptions
+import "mediapipe/framework/calculator.proto";
+
+// Define the protobuf type GoblinCalculator14Options
+// The bizarre proto2 extension pattern
+// Note that it is NOT subclassing
+// I don't think ext field number matters as long as it is in the allowed range
+message GoblinCalculator14Options{
+    extend CalculatorOptions {
+        optional GoblinCalculator14Options ext = 20666;
+    }
+    // Two double options, with defaults
+    optional double opt_a = 1 [default = 2.];
+    optional double opt_b = 2 [default = 0.];
+}
