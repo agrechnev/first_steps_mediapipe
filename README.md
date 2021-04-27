@@ -79,6 +79,8 @@ example `1_2` assumes you are already familiar with `1_1`. Currently the followi
 2.3: Video pipeline with ImageCroppingCalculator (dynamic crop)  
 2.4: Video pipeline with FeatureDetectorCalculator and custom image processing  
 
+3.1: Why MediaPipe is not real-time?
+3.2: Packet loss with FlowLimiterCalculator
 
 Why Bazel?
 --------
@@ -102,5 +104,6 @@ Finally, is there any IDE for Bazel C++ projects? CLion plugin is advertized, bu
 VS code also has Bazel plugins, which did not work for me either. However, if I open the entire MP tree as a single
 VS Code project, VS Code can (mostly) find MP headers, and thus the "Show symbol definition" function works.
 To me this is the main reason to use IDE (as opposed to a text editor). So I edited the code in VS Code, and executed it from the terminal.
+Downside: VS code runs `cpptools` almost non-stop, taking computer resources.
 
 I wonder what IDE do they use in Google?
