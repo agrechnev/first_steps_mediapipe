@@ -47,7 +47,7 @@ This has been tested on Kubuntu 20.10 and later 21.04, but hopefully it works on
 `bazel run --define MEDIAPIPE_DISABLE_GPU=1 //mediapipe/examples/desktop/hello_world`  
 Important: On modern Linux you will see weird errors if you don't have `python` in your path, `python3` will not do!  
 This is fixed by `sudo apt install python-is-python2`.  
-If the standard hellow world does not work for you, I cannot help you further.  
+If the standard hello world does not work for you, I cannot help you further.  
 3. Copy the directory `first_steps` from this repo to `mediapipe/examples` in the MP repo (in will sit next to `android`, `coral`, `desktop` and `ios`).  
 4. Upon upgrading to opencv 4.5 (with Kubuntu 21.04), I had to comment out the line `#include <opencv2/cvconfig.h>` in
 `mediapipe/framework/port/opencv_core.inc`.
@@ -77,7 +77,7 @@ example `1_2` assumes you are already familiar with `1_1`. Currently the followi
 2.1: Video pipeline  
 2.2: Video pipeline with ImageCroppingCalculator and ScaleImageCalculator  
 2.3: Video pipeline with ImageCroppingCalculator (dynamic crop)  
-2.4: Video pipeline with FeatureDetectorCalculator and custom image processing.  
+2.4: Video pipeline with FeatureDetectorCalculator and custom image processing  
 
 
 Why Bazel?
