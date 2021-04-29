@@ -3,7 +3,6 @@ First steps with Google MediaPipe: An Informal tutorial
 
 By Oleksiy Grechnyev, IT-JIM (https://www.it-jim.com/)  
 
-Development in progress, more is coming soon hopefully ...  
 
 What is this?
 -----------
@@ -35,6 +34,12 @@ Prerequisites:
 * Install MP and try the MP C++ "Hello world" example
 
 Enjoy!
+
+Note: there is a method in my madness. Using MP solutions is pretty trivial, no need for tutorial like mine.
+I wanted to illustrate MP fundamentals, which are under the hood. Likewise, TF Lite inference in MP
+is essentially TF Lite + MP basics. Again, you need to understand MP basics first.
+By the time I got MP basics, I got bored with MP, so I didn't do TF Lite in MP (which is not very difficult
+anyway if you know how to use TF Lite).
 
 Installation
 ------------
@@ -79,8 +84,8 @@ example `1_2` assumes you are already familiar with `1_1`. Currently the followi
 2.3: Video pipeline with ImageCroppingCalculator (dynamic crop)  
 2.4: Video pipeline with FeatureDetectorCalculator and custom image processing  
 
-3.1: Why MediaPipe is not real-time?
-3.2: Packet loss with FlowLimiterCalculator
+3.1: Why MediaPipe is not real-time?  
+3.2: Packet loss with FlowLimiterCalculator  
 
 Why Bazel?
 --------
@@ -101,8 +106,8 @@ and you will have to look for any other (system-wide) external libraries (e.g. B
 custom shell scripts), as the usual tools like CMake find_package or pkgconfig are not available in Bazel.
 
 Finally, is there any IDE for Bazel C++ projects? CLion plugin is advertized, but it does not work with modern CLion versions.
-VS code also has Bazel plugins, which did not work for me either. However, if I open the entire MP tree as a single
-VS Code project, VS Code can (mostly) find MP headers, and thus the "Show symbol definition" function works.
+VS code also has Bazel plugins, which did not work for me either (I don't know enough Bazel or vs code to tell why). However, if I open the entire MP tree as a single
+VS Code project, VS Code can (mostly) find MP headers, and thus the "Show symbol definition" function works with MP symbols (but not with OpenCV symbols).
 To me this is the main reason to use IDE (as opposed to a text editor). So I edited the code in VS Code, and executed it from the terminal.
 Downside: VS code runs `cpptools` almost non-stop, taking computer resources.
 
